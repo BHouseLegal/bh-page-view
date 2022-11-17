@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { navItems } from './bh-core/bh-constants/nav-items.const';
+import { NavItems } from './bh-core/bh-interfaces/bh-nav-items';
 
 @Component({
   selector: 'bh-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bh-page-view';
+  navItems: NavItems[] = navItems;
 }

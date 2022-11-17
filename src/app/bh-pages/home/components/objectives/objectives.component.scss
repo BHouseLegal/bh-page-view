@@ -1,0 +1,32 @@
+.bh-objectives {
+    max-width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    position: relative;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+
+        &:nth-child(even) {
+            background-color: var(--color-tertiary-glass-dark);
+            color: var(--color-text-light);
+        }
+
+        &:nth-child(odd) {
+            background-color: var(--color-secondary-glass-dark);
+            color: var(--color-primary-dark);
+        }
+    }
+
+    &-title {
+        font-size: 18rem;
+        color: var(--color-primary-light);
+        z-index: -1;
+        position: absolute;
+        transform: translateY(56%);
+    }
+}

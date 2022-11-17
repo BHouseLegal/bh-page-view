@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+
+    // Primary colors
+    --color-primary: #75234C;
+    --color-secondary: #D9AA52;
+    --color-tertiary: #58595B;
+
+    // Text colors
+    --color-text-dark: #6D6E71;
+    --color-text-light: #F2F2F0;
+
+    // Primary colors variations
+    --color-primary-light: #de91b8;
+    --color-primary-dark: #521936;
+    --color-secondary-light: #f0ddba;
+    --color-secondary-dark: #ad7e26;
+    --color-tertiary-light: #bbbcbe;
+    --color-tertiary-dark: #3d3e40;
+
+    // Glassphormism
+    --color-primary-glass-light: rgba(117,35,76,0.25);
+    --color-secondary-glass-light: rgba(217,170,82,0.25);
+    --color-tertiary-glass-light: rgba(88,89,91,0.25);
+    --color-primary-glass-dark: rgba(117,35,76,0.75);
+    --color-secondary-glass-dark: rgba(217,170,82,0.75);
+    --color-tertiary-glass-dark: rgba(88,89,91,0.75);
+
+
+    // Elevations
+    --elevation-z0: 0 2px 4px 0 rgba(117,35,76, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    --elevation-z8: 0 5px 5px -3px rgba(117,35,76, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --elevation-z16: 0 8px 10px -5px rgba(117,35,76, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+
+    // Font size
+    --font-size-biggest: 2.8rem;
+    --font-size-biggest-small: 2.2rem;
+    --font-size-bigger: 1.4rem;
+    --font-size-big: 1.2rem;
+    --font-size-base: 1rem;
+    --font-size-small: 0.9rem;
+    --font-size-smaller: 0.75rem;
+    --font-size-extra-small: 0.65rem;
+    --font-size-extra-plus-small: 0.5rem;
+
+    // Font weight
+    --font-weight-base: 300;
+    --font-weight-lightbold: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    // Transition
+    --transition-bezier: all 0.15s cubic-bezier(0.17, 0.67, 0.8, 0.62);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}	
+
+p, div, span {
+    color: #6D6E71;
+}

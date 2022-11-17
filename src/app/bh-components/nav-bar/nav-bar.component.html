@@ -1,0 +1,9 @@
+<div class="bh-nav-bar">
+    <div 
+        class="bh-nav-bar-item" 
+        [class.bh-nav-bar-item--active]="item.id === activeItem" 
+        *ngFor="let item of items" (click)="handleItemSelected(item)"
+    >
+        {{item.label | bhTranslate }}
+    </div>
+</div>

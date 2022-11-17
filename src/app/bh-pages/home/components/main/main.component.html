@@ -1,0 +1,16 @@
+<div class="bh-home-main">
+    
+</div>
+<div class="bh-home-main-text">
+    <div class="bh-home-main-text--small">
+        {{getMainText('main.phrase' | bhTranslate)[1]}}
+    </div>
+    <div class="bh-home-main-text--bigger">
+        <span class="bh-home-main-text__first-letter">
+            {{getMainText('main.phrase' | bhTranslate)[0].charAt(0)}}
+        </span>
+        <span >
+            {{getMainText('main.phrase' | bhTranslate)[0].slice(1)}}
+        </span>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.bh-values {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    &-container:first-child {
+        display: grid;
+        grid-template-columns: auto;
+
+        & .bh-values-item {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+    
+            &:nth-child(odd) {
+                background-color: var(--color-primary-glass-dark);
+                color: var(--color-text-light);
+            }
+    
+            &:nth-child(even) {
+                background-color: var(--color-primary-glass-light);
+                color: var(--color-primary-dark);
+            }
+        }
+    }
+
+    &-container:last-child {
+        display: grid;
+        grid-template-columns: auto;
+
+        & .bh-values-item {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+    
+            &:nth-child(even) {
+                background-color: var(--color-primary-glass-dark);
+                color: var(--color-text-light);
+            }
+    
+            &:nth-child(odd) {
+                background-color: var(--color-primary-glass-light);
+                color: var(--color-primary-dark);
+            }
+        }
+    }
+
+
+}

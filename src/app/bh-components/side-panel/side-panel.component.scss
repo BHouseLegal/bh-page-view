@@ -1,0 +1,18 @@
+.bh-side-panel {
+    background-color: var(--color-secondary);
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: var(--elevation-z8);
+    z-index: 1;
+
+
+    &-secondary {
+        background-color: var(--color-primary);
+        width: 85%;
+        height: 100vh;
+        box-shadow: var(--elevation-z8);
+    }
+}

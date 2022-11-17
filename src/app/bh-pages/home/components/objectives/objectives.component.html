@@ -1,0 +1,14 @@
+<div class="bh-objectives">
+    <ng-container *ngFor="let objective of objectives">
+        <div class="bh-objectives-item" >
+            {{objective.label | bhTranslate}}
+        </div>
+        <div class="bh-objectives-item" >
+        </div>
+    </ng-container>
+    
+    <div class="bh-objectives-title">
+        {{'objectives.title' | bhTranslate}}
+    </div>
+</div>
+

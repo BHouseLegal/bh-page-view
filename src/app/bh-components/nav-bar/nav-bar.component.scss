@@ -1,0 +1,30 @@
+.bh-nav-bar {
+    display: flex;
+    align-items: flex-start;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    
+
+    &-item {
+        background-color: var(--color-tertiary-glass-light);
+        padding: 1rem;
+        color: var(--color-primary);
+        border-radius: 0 0 10px 10px;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-bold);
+        transition: 0.5s all ease-out;
+        backdrop-filter: blur(24px);
+
+        &:hover,       
+        &--active {
+            padding-top: 2rem;
+            cursor: pointer;
+            background-color: var(--color-tertiary);
+            color: var(--color-text-light);
+            box-shadow: var(--elevation-z8);
+        }
+    }
+}
