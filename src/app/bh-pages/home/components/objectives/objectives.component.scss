@@ -1,6 +1,6 @@
 .bh-objectives {
     max-width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     position: relative;
@@ -11,15 +11,16 @@
         text-align: center;
         padding: 1rem;
 
-        &:nth-child(even) {
+        &:nth-child(odd) {
             background-color: var(--color-tertiary-glass-dark);
             color: var(--color-text-light);
         }
 
-        &:nth-child(odd) {
+        &:nth-child(even) {
             background-color: var(--color-secondary-glass-dark);
             color: var(--color-primary-dark);
         }
+
     }
 
     &-title {
@@ -27,6 +28,32 @@
         color: var(--color-primary-light);
         z-index: -1;
         position: absolute;
-        transform: translateY(56%);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: auto;
+
+        &-item {
+            &:nth-child(odd) {
+                display: none;
+            }
+        }
+
+        &-title {
+            font-size: 7rem;
+            position: absolute;
+            top: 0;
+            text-orientation: upright;
+            writing-mode: vertical-lr;
+            transform: inherit;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        &-title {
+            font-size: 16rem;
+        }
     }
 }

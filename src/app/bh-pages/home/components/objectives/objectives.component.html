@@ -1,4 +1,7 @@
 <div class="bh-objectives">
+    <div class="bh-objectives-title">
+        {{'objectives.title' | bhTranslate}}
+    </div>
     <ng-container *ngFor="let objective of objectives">
         <div class="bh-objectives-item" >
             {{objective.label | bhTranslate}}
@@ -7,8 +10,6 @@
         </div>
     </ng-container>
     
-    <div class="bh-objectives-title">
-        {{'objectives.title' | bhTranslate}}
-    </div>
+    
 </div>
 

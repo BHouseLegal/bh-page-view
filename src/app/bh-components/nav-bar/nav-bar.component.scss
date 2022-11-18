@@ -1,15 +1,21 @@
 .bh-nav-bar {
-    display: flex;
-    align-items: flex-start;
-    float: right;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
+
+    &-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        overflow: hidden;
+    }
+
+    &-items {
+        display: flex;
+        align-items: flex-start;
+    }
     
 
     &-item {
-        background-color: var(--color-tertiary-glass-light);
+        background-color: var(--color-primary-glass-light);
         padding: 1rem;
         color: var(--color-primary);
         border-radius: 0 0 10px 10px;
@@ -22,9 +28,25 @@
         &--active {
             padding-top: 2rem;
             cursor: pointer;
-            background-color: var(--color-tertiary);
+            background-color: var(--color-primary);
             color: var(--color-text-light);
             box-shadow: var(--elevation-z8);
+        }
+    }
+
+    &-icon {
+        display: none;
+    }
+
+    @media (max-width: 450px) {
+
+        &-items {
+            display: inherit;
+            float: none;
+        }
+
+        &-item {
+            border-radius: 0;
         }
     }
 }

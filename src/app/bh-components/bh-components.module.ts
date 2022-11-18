@@ -4,23 +4,28 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BhPipesModule } from '../bh-core/bh-pipes/bh-pipes.module';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { FooterComponent } from './footer/footer.component';
-
-
+import { CarouselComponent } from './carousel/carousel.component';
+import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     SidePanelComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
-    BhPipesModule
+    BhPipesModule,
+    RouterModule,
+    CarouselModule
   ],
   exports: [
     NavBarComponent,
     SidePanelComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ]
 })
 export class BhComponentsModule { }

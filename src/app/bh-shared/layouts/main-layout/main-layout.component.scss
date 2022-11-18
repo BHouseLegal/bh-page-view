@@ -1,5 +1,23 @@
 .bh-main-layout {
-    margin-left: 15%;
     min-height: 100vh;
+    display: flex;
+    &-side {
+        width: 15%;
+        min-height: 100vh;
+    }
+
+    &-content {
+        width: 85%;
+    }
+
+    @media (max-width: 600px) {
+        &-side {
+            display: none;
+        }
+    
+        &-content {
+            width: 100%;
+        }
+    }
 }
 

@@ -4,11 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-tertiary-glass-light);
-
+    background-color: var(--color-tertiary-glass-light);   
     
+    background: url(https://lawyerorgin.files.wordpress.com/2018/11/lawyer-photo.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.3;
 
-    &::after {
+    &-container {
+        position: relative;
+    }
+
+    /* &::after {
         content: "";
         position: absolute;
         top: 0px;
@@ -18,14 +24,15 @@
         background: url(https://lawyerorgin.files.wordpress.com/2018/11/lawyer-photo.jpg) no-repeat;
         background-size: cover;
         opacity: 0.3;
-    }
+    } */
 
     &-text {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-40%, -60%);
+        transform: translate(-50%, -50%);
         text-shadow: 0 1px 4px var(--color-text-dark);
+        z-index: 2;
 
         &--bigger {
             font-size: 5rem;
@@ -37,8 +44,8 @@
         &--small {
             font-size: 1.3rem;
             letter-spacing: 0.3rem;
-            position: relative;
-            top: 7.5rem;
+            position: absolute;
+            top: 5.5rem;
             left: 6rem;
             color: var(--color-secondary);
             text-transform: uppercase;
@@ -48,5 +55,37 @@
             letter-spacing: -2.5rem;
             font-size: 12rem;
         }
+
+        @media (max-width: 600px) {
+
+            &__first-letter {
+                letter-spacing: -20px;
+                font-size: 7rem;
+            }
+
+            &--bigger {
+                font-size: 2rem;
+                display: flex;
+                align-items: baseline;
+            }
+
+            &--small {
+                font-size: 0.7rem;
+                top: 3rem;
+                left: 3rem;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            &--bigger {
+                font-size: 4rem;
+            }
+
+            &--small {
+                top: 5rem;
+                left: 5.5rem;
+            
+            }
+        }   
     }
 }
