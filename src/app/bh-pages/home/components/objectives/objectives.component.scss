@@ -38,11 +38,7 @@
     @media (max-width: 600px) {
         grid-template-columns: auto;
 
-        /* &-item {
-            &:nth-child(odd) {
-                display: none;
-            }
-        } */
+        background-position: center;
 
         &-title {
             font-size: 6rem;

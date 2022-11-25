@@ -13,18 +13,6 @@
         position: relative;
     }
 
-    /* &::after {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background: url(https://lawyerorgin.files.wordpress.com/2018/11/lawyer-photo.jpg) no-repeat;
-        background-size: cover;
-        opacity: 0.3;
-    } */
-
     &-text {
         position: absolute;
         top: 50%;
@@ -86,5 +74,9 @@
             
             }
         }   
+    }
+
+    @media (max-width: 600px) {
+        background-position: center;
     }
 }
