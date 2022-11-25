@@ -1,4 +1,37 @@
 .bh-history {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    background: url('../../../../../assets/images/history.jpg') no-repeat;
+    background-size: cover;
+
+    &-wine {
+        background-color: var(--color-primary-glass-dark);
+    }
+
+    &-gold {
+        background-color: var(--color-tertiary-glass-dark);
+    }
+
+    &-text {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-text-light);
+        text-align: justify;
+
+        @media (max-width: 600px) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            padding: 1rem;
+            transform: translateY(-50%);
+            font-size: var(--font-size-small);
+        }
+    }
 }

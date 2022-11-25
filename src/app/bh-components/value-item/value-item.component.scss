@@ -1,0 +1,27 @@
+.bh-value-item {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    height: 100%;
+
+    &__description {   
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+        padding: 1rem;
+        
+        h1 {
+            color: var(--color-primary);
+        }
+        
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: auto;
+
+        &__image {
+            display: none;
+        }
+    }
+}

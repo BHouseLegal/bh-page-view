@@ -7,25 +7,29 @@ import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ValueItemComponent } from './value-item/value-item.component';
 
 @NgModule({
   declarations: [
     NavBarComponent,
     SidePanelComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    ValueItemComponent
   ],
   imports: [
     CommonModule,
     BhPipesModule,
     RouterModule,
-    CarouselModule
+    CarouselModule,
+    BhPipesModule
   ],
   exports: [
     NavBarComponent,
     SidePanelComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    ValueItemComponent
   ]
 })
 export class BhComponentsModule { }

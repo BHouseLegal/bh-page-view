@@ -11,6 +11,25 @@
         width: 85%;
         height: 100%;
         box-shadow: var(--elevation-z8);
+        background-image: url('../../../assets/images/trama.png');
+        background-size: contain;
+    }
+
+    &-logo {
+        position: sticky;
+        height: 190px;
+        top: 50%;
+        z-index: 1000;
+        background-color: var(--color-primary);
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        box-shadow: var(--elevation-z16);
+        justify-content: center;
+
+        :first-child {
+            width: 100%;
+        }
     }
 
     @media (max-width: 600px) {

@@ -1,24 +1,11 @@
 <div class="bh-values">
-    <div class="bh-values-container">
-        <div class="bh-values-item">
-
-        </div>
-        <div class="bh-values-item">
-    
-        </div>
-        <div class="bh-values-item">
-    
-        </div>
+    <div class="bh-values-item" >
+        <bh-value-item [value]="value" *ngFor="let value of values | slice:0:2"></bh-value-item>
     </div>
-    <div class="bh-values-container">
-        <div class="bh-values-item">
-
-        </div>
-        <div class="bh-values-item">
-    
-        </div>
-        <div class="bh-values-item">
-    
-        </div>
+    <div class="bh-values-item" >
+        <bh-value-item [value]="value" *ngFor="let value of values | slice:2:4"></bh-value-item>
+    </div>
+    <div class="bh-values-item" >
+        <bh-value-item [value]="value" *ngFor="let value of values | slice:4:7"></bh-value-item>
     </div>
 </div>

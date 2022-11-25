@@ -1,4 +1,8 @@
-<bh-nav-bar [items]="navItems"></bh-nav-bar>
-<bh-main-layout>
-    <router-outlet></router-outlet>
-</bh-main-layout>
+<div class="bh-app">
+    <bh-nav-bar [items]="navItems"></bh-nav-bar>
+    <bh-main-layout>
+        <router-outlet></router-outlet>
+        <bh-footer></bh-footer>
+    </bh-main-layout>
+</div>
+

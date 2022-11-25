@@ -1,0 +1,11 @@
+<div class="bh-value-item" *ngIf="value">
+    <div class="bh-value-item__image">
+        <img [src]="'../../../assets/images/' + value.imageName" width="100%" alt="{{value.title | bhTranslate }}" height="100%" />
+    </div>
+    <div class="bh-value-item__description">
+        <h1>{{value.title | bhTranslate | uppercase}}</h1>
+        <p>
+            {{value.label | bhTranslate}}
+        </p>
+    </div>
+</div>

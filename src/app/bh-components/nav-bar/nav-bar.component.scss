@@ -6,6 +6,14 @@
         right: 0;
         z-index: 3;
         overflow: hidden;
+
+        @media (max-width: 600px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            margin: 0.5rem;
+            width: 100%;
+        }
     }
 
     &-items {
@@ -15,7 +23,7 @@
     
 
     &-item {
-        background-color: var(--color-primary-glass-light);
+        background-color: var(--color-secondary-glass-dark);
         padding: 1rem;
         color: var(--color-primary);
         border-radius: 0 0 10px 10px;
@@ -36,6 +44,18 @@
 
     &-icon {
         display: none;
+        padding: 10px;
+        text-align: right;
+
+        &:hover {
+            svg path {
+                fill: var(--color-primary);
+            }
+        }
+    }
+
+    &-logo {
+        display: none;
     }
 
     @media (max-width: 450px) {
@@ -43,10 +63,28 @@
         &-items {
             display: inherit;
             float: none;
+
+            &.hide {
+                width: 0;
+
+                .bh-nav-bar-item {
+                    display: none;
+                }
+            }
+
+            transition: var(--transition-bezier);
         }
 
         &-item {
             border-radius: 0;
+        }
+
+        &-icon {
+            display: block;
+        }
+
+        &-logo {
+            display: block;
         }
     }
 }
