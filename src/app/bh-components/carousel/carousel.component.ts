@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -7,21 +7,21 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
+  @Input() items!: {id: string, imageUrl: string}[];
 
-  cars = [{title: 'volvo', description: 'son una excelente empresa'},{title: 'mazda', description: 'son una excelente empresa'}, {title: 'mercedez', description: 'son una excelente empresa'}, {title: 'volvo', description: 'son una excelente empresa'}]
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
     dots: true,
-    navSpeed: 700,
+    autoplaySpeed: 1000,
     navText: ['', ''],
     responsive: {
       0: {
         items: 1
       },
-      400: {
+      300: {
         items: 2
       },
       740: {
@@ -29,9 +29,17 @@ export class CarouselComponent implements OnInit {
       },
       940: {
         items: 4
+      },
+      1400: {
+        items: 5
       }
     },
-    nav: true
+    nav: true,
+    autoplay: true,
+    autoWidth: true,
+    margin: 20,
+    stagePadding: 70,
+    center: true
   }
 
   constructor() { }

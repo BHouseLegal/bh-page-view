@@ -1,0 +1,37 @@
+<div class="bh-service">
+    <div class="bh-service-fundamentals">
+        <h2 class="bh-service-fundamentals-title">
+            {{services[0].title | bhTranslate}}
+        </h2>
+        <div class="bh-service-fundamentals-content">
+            <div class="bh-service-fundamentals-content__side">
+                <img class="bh-service-fundamentals-vector" src="./assets/images/services/Vector_08.png"/>
+            </div>
+            <div class="bh-service-fundamentals-content__main">
+                
+                <ul>
+                    <li class="bh-service-fundamentals-item" *ngFor="let item of getChild(services[0]); index as i">
+                        <span>{{getService(services[0],i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bh-service-training">
+        <div class="bh-service-training-content">
+            <div class="bh-service-training-content__main">
+                <h2 class="bh-service-training-title">
+                    {{services[1].title | bhTranslate}}
+                </h2>
+                <div class="bh-service-training-subtitle">
+                    {{services[1].label | bhTranslate}}
+        
+                </div>
+            </div>
+            <div class="bh-service-training-content__side">
+                <img class="bh-service-training-vector" src="./assets/images/services/Vector_09.png"/>
+            </div>
+        </div> 
+       
+    </div>
+</div>

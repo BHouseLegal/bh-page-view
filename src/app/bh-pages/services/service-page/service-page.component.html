@@ -1,0 +1,9 @@
+<div class="bh-service-page">
+    <bh-services-main></bh-services-main>
+    <bh-corporate [service]="services[0]"></bh-corporate>
+    <bh-commercial [service]="services[1]"></bh-commercial>
+    <bh-labor [services]="services.slice(2,4)"></bh-labor>
+    <bh-immigration [service]="services[4]"></bh-immigration>
+    <bh-defense [services]="services.slice(5,7)"></bh-defense>
+    <bh-fundamentals [services]="services.slice(7)"></bh-fundamentals>
+</div>

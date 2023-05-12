@@ -1,0 +1,179 @@
+.bh-service-corporate {
+    width: 100vw;
+    min-height: 100vh;
+
+    background: url('../../../../../assets/images/services/Fondo_Seccion_02_Servicios.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 100%;
+    background-position: center;
+
+    position: relative;
+    padding-bottom: 15px;
+
+
+    &-container {
+        width: 80vw;
+        margin: auto;
+        padding-top: 14.8vh;
+        position: relative;
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        &__main {
+            width: 60%;
+        }
+
+        &__side {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &-title {
+        font-size: 3.49vw;
+        font-family: var(--font-family-primary);
+        color: var(--color-white);
+        text-shadow: var(--text-shadow);
+        padding-top: 20px;
+        border-top: 4px solid var(--color-white);
+    }
+
+    &-item {
+        position: relative;
+        left: 4vw;
+        font-size: 15px;
+        font-family: 'Mulish-ExtraLight';
+        color: var(--color-secondary);
+        line-height: 1.5rem;
+
+        span {
+            color: var(--color-white);
+        }
+
+    }
+
+    &-vector {
+        width: 80%;
+    } 
+
+    &-elements {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &-square-one {
+        position: absolute;
+        top: 12vh;
+        left: 1vw;
+    }
+
+    &-square-two {
+        display: none;
+        position: absolute;
+        top: 50vh;
+        left: 25vw;
+        transform: rotate(90deg);
+    }
+
+    &-triangle {
+        position: absolute;
+        width: 15vw;
+        z-index: 3;
+        right: 0;
+        top: 50vh;
+    }
+
+    @media (min-width: 750px) and (max-width: 1350px) {
+        z-index: 2;
+        &-item {
+            left: 1vw;
+        }
+
+        &-content {
+            padding-bottom: 10px;
+
+            &__main, &__side {
+                width: 50%;
+            }
+        }
+
+        &-triangle {
+            position: absolute;
+            width: 15vw;
+            z-index: 3;
+            right: 0;
+            top: 75vh;
+        }
+
+        &-square-one {
+            position: absolute;
+            top: 31vh;
+            left: 1vw;
+        }
+
+        &-square-two {
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 750px) {
+
+        &-content {
+            padding-bottom: 10px;
+            flex-direction: column;
+
+            &__main, &__side {
+                width: 100%;
+            }
+
+        }
+
+        &-square-one {
+            display: none;
+        }
+
+        &-square-two {
+            position: absolute;
+            width: 12%;
+            z-index: 3;
+            right: 0;
+            top: 92%;
+            height: 25%;
+            left: 45vw;
+        }
+
+        &-triangle {
+            display: none;
+        }
+
+        &-container {
+            width: 95%;
+        }
+
+        &-title {
+            font-size: 10vw;
+            text-align: center
+        }
+
+        &-elements {
+            flex-direction: column;           
+            padding-bottom: 7px;
+        }
+
+
+        &-item {
+            left: 0;
+            right: 0;
+        }
+
+        &-vector {
+            width: 100%;
+        }
+    }
+}

@@ -1,9 +1,5 @@
 export const navItems = [
     {
-        id: "home",
-        label: "navItems.home"
-    },
-    {
         id: "services",
         label: "navItems.services"
     },

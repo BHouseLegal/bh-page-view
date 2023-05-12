@@ -1,0 +1,84 @@
+<div class="bh-contact-form" [formGroup]="contactForm">
+    <h1>Formulario de contacto</h1>
+    <div class="form-row">
+        <bh-input
+            class="general-basic-info-form__input"
+            [class.col-sm-4]="contactForm.get('name')"
+            [class.col-sm-6]="!contactForm.get('name')"
+            formControlName="name"
+            [isInvalid]="(contactForm.get('name') | isInvalid)"    
+        >
+            <ng-container label>{{'contact.form.name' | bhTranslate}} <i class="fa-solid fa-asterisk"*ngIf="(contactForm.get('name') | hasValidator)"></i></ng-container>
+            <ng-container errors>
+                <ng-container
+                    [ngTemplateOutlet]="validationRequired"
+                    [ngTemplateOutletContext]="{ref: contactForm.get('name')}"
+                    errors
+                ></ng-container>
+            </ng-container>
+        </bh-input>
+        <bh-input
+            class="general-basic-info-form__input"
+            [class.col-sm-4]="contactForm.get('phone')"
+            [class.col-sm-6]="!contactForm.get('phone')"
+            formControlName="phone"
+            [isInvalid]="(contactForm.get('phone') | isInvalid)"    
+        >
+            <ng-container label>{{'contact.form.phone' | bhTranslate}} <i class="fa-solid fa-asterisk"*ngIf="(contactForm.get('phone') | hasValidator)"></i></ng-container>
+            <ng-container errors>
+                <ng-container
+                    [ngTemplateOutlet]="validationRequired"
+                    [ngTemplateOutletContext]="{ref: contactForm.get('phone')}"
+                    errors
+                ></ng-container>
+            </ng-container>
+        </bh-input>
+    </div>
+    <bh-input
+        class="general-basic-info-form__input"
+        [class.col-sm-4]="contactForm.get('email')"
+        [class.col-sm-6]="!contactForm.get('email')"
+        formControlName="email"
+        [isInvalid]="(contactForm.get('email') | isInvalid)"    
+    >
+        <ng-container label>{{'contact.form.email' | bhTranslate}} <i class="fa-solid fa-asterisk"*ngIf="(contactForm.get('email') | hasValidator)"></i></ng-container>
+        <ng-container errors>
+            <ng-container
+                [ngTemplateOutlet]="validationRequired"
+                [ngTemplateOutletContext]="{ref: contactForm.get('email')}"
+                errors
+            ></ng-container>
+        </ng-container>
+    </bh-input>
+
+    <bh-text-area
+        class="general-basic-info-form__input"
+        [class.col-sm-4]="contactForm.get('description')"
+        [class.col-sm-6]="!contactForm.get('description')"
+        formControlName="description"
+        [isInvalid]="(contactForm.get('description') | isInvalid)"    
+    >
+        <ng-container label>{{'contact.form.description' | bhTranslate}} <i class="fa-solid fa-asterisk"*ngIf="(contactForm.get('description') | hasValidator)"></i></ng-container>
+        <ng-container errors>
+            <ng-container
+                [ngTemplateOutlet]="validationRequired"
+                [ngTemplateOutletContext]="{ref: contactForm.get('description')}"
+                errors
+            ></ng-container>
+        </ng-container>
+    </bh-text-area>
+    <div class="bh-contact-form-button-container">
+        <button type="button" class="bh-contact-form-button" [class.disabled]="contactForm.invalid" [disabled]="contactForm.invalid">
+            Contactar
+        </button>
+    </div>
+</div>
+
+<ng-template #validationRequired let-ref="ref">
+    <ng-container *ngIf="(
+      ref.touched &&
+      ref.hasError('required')
+    )">
+      <span>Este campo es requerido.</span>
+    </ng-container>
+</ng-template>

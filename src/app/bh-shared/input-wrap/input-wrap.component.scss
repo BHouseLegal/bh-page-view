@@ -1,0 +1,51 @@
+.wrap-input {
+    min-height: 4.7rem;
+
+
+    &__label {
+        font-size: var(--font-size-smaller);
+        text-transform: capitalize;
+        position: relative;
+        padding: 0.3rem 0.5rem;
+        top: -2.9rem;
+        color: var(--color-text-light);
+    }
+
+    &__icon {
+        position: relative;
+        top: -3.5rem;
+        right: -90%;
+        cursor: pointer;
+    }
+
+    &__error {
+        font-size: var(--font-size-smaller);
+        padding-left: 0.5rem;
+        color: var(--error);
+        display: none;
+        position: relative;
+        top: -1.5rem;
+    }
+
+    &--invalid {
+        & .wrap-input__error {
+            display: block;
+        }
+
+        &.wrap-input--focus {
+            & .wrap-input__label {
+                color: var(--error-contrast);
+            }
+        }  
+
+        & .wrap-input__label {
+            color: var(--error-contrast);
+        }
+    }
+
+    &--focus {
+        & .wrap-input__label {
+            color: var(--color-text-dark);
+        }
+    }
+}

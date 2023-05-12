@@ -1,18 +1,14 @@
 
 <div class="bh-home-main-container">
-    <div class="bh-home-main-text">
-        <div class="bh-home-main-text--small">
-            {{getMainText('main.phrase' | bhTranslate)[1]}}
-        </div>
-        <div class="bh-home-main-text--bigger">
-            <span class="bh-home-main-text__first-letter">
-                {{getMainText('main.phrase' | bhTranslate)[0].charAt(0)}}
-            </span>
-            <span >
-                {{getMainText('main.phrase' | bhTranslate)[0].slice(1)}}
-            </span>
-        </div>
+    <div class="bh-home-main-text" [ngStyle]="{'opacity': showLogo ? 1 : 0}">
+        <h1>{{'main.title' | bhTranslate}}</h1>
+        <div>{{'main.subtitle' | bhTranslate}}</div>
     </div>
+    <img class="bh-home-main-logo" [src]="'./assets/images/Logo_Blanco_Sombra.png'" [ngStyle]="{'opacity': !showLogo ? 1 : 0, 'display': !showLogo ? 'block': 'none'}">
+
+    <img class="bh-home-main-decorator" [src]="'./assets/images/Cuadrado_Decoracion.png'" />
+    <img class="bh-home-main-line" [src]="'./assets/images/Linea_Seccion_01_Home.png'"/>
+    <div class="bh-home-main-gradient"></div>
     <div class="bh-home-main">
         
     </div>

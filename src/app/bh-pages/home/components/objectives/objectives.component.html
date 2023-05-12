@@ -1,15 +1,14 @@
-<div class="bh-objectives">
-    <div class="bh-objectives-title">
-        {{'objectives.title' | bhTranslate | uppercase}}
+<div class="bh-history-section" >
+    <div class="bh-history-secret">
+        <div>
+            <div class="bh-history-secret-title">{{'secret.title' | bhTranslate }}</div>
+            <div class="bh-history-secret-subtitle">{{'secret.subtitle' | bhTranslate }}</div>
+        </div>
+        <div>
+        </div>
+        <img class="bh-history-hand" [src]="'./assets/images/Mano.png'"/>
     </div>
-    <ng-container *ngFor="let objective of objectives">
-        <div class="bh-objectives-item" >
-            {{objective.label | bhTranslate}}
-        </div>
-        <div class="bh-objectives-item" >
-        </div>
-    </ng-container>
-    
-    
+    <img class="bh-history-decorator" [src]="'./assets/images/Cuadrado_Decoracion.png'" width="326px"/>
+    <img class="bh-history-line-two" [src]="'./assets/images/Linea_Seccion_03_Home.png'" style="left: -0.2vw;"/>
 </div>
 

@@ -1,4 +1,30 @@
 .bh-app {
     display: grid;
     grid-template-columns: auto;
+    width: 100vw;
+
+    .bh-icon {
+        position: fixed;
+        right: 65px;
+        bottom: 35px;
+        backdrop-filter: blur(15px);
+        padding: 0px 5px;
+        border-radius: 5px;
+        z-index: 10000;
+
+        i {
+            
+            font-size: 90px;
+            color: var(--color-primary);
+        }
+
+        &:hover {
+            cursor: pointer;
+            
+            i {
+                color: var(--color-secondary-glass-dark);
+            }
+        }
+    }       
+    
 }

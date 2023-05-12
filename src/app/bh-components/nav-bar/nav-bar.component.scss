@@ -1,19 +1,15 @@
 .bh-nav-bar {
+    position: fixed;
+    z-index: 6;
+    padding: 1vw 9.7vw;
+    transition: all ease-in-out 0.5s;
+   
 
     &-container {
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 3;
-        overflow: hidden;
-
-        @media (max-width: 600px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            margin: 0.5rem;
-            width: 100%;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100vw - 19.4vw);
     }
 
     &-items {
@@ -23,22 +19,43 @@
     
 
     &-item {
-        background-color: var(--color-secondary-glass-dark);
-        padding: 1rem;
-        color: var(--color-primary);
-        border-radius: 0 0 10px 10px;
-        font-size: var(--font-size-base);
-        font-weight: var(--font-weight-bold);
-        transition: 0.5s all ease-out;
-        backdrop-filter: blur(24px);
+        background: rgba(255,255,255, 0.32) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px var(--text-shadow);
+        border-radius: 17px;
+        margin: 0 10px;
+        color: var(--color-white);
+        padding: 0.26vw 2.34vw;
+        font-size: 1vw;
+
+        &:last-child {
+            padding: 0.26vw 1.41vw;
+            display: flex;
+
+            img {
+                width: 2vw;
+                height: 1.2vw;
+                opacity: 0.3;
+
+                &:hover, &.bh-nav-bar-item-lang--active {
+                    opacity: 1;
+                }            
+            }
+
+
+
+            &:hover {
+                cursor: pointer;
+                background: rgba(255,255,255, 0.32) 0% 0% no-repeat padding-box;
+
+            }
+        }
+        
 
         &:hover,       
         &--active {
-            padding-top: 2rem;
             cursor: pointer;
-            background-color: var(--color-primary);
-            color: var(--color-text-light);
-            box-shadow: var(--elevation-z8);
+            background: #7E234A 0% 0% no-repeat padding-box;
+            opacity: 1;
         }
     }
 
@@ -54,9 +71,6 @@
         }
     }
 
-    &-logo {
-        display: none;
-    }
 
     @media (max-width: 450px) {
 
@@ -84,8 +98,19 @@
         }
 
         &-logo {
-            display: block;
-            margin-left: 1rem;
+            display: none
         }
+    }
+}
+
+.divider {
+    height: 1.2vw;
+    width: 3px;
+    margin: 0 5px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+
+    &::after {
+        content: '';
     }
 }

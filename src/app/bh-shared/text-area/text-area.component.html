@@ -1,0 +1,24 @@
+<bh-input-wrap [isInvalid]="isInvalid" [isFocus]="isFocus"  (click)="handleFocus()">
+    <ng-container field>
+        <textarea
+            rows="5"
+            [class.invalid]="isInvalid"
+            [value]="currentValue"
+            [placeholder]="placeholder"
+            [autocomplete]="autocomplete"
+            [readonly]="readonly"
+            [attr.min]="min"
+            [attr.max]="max"
+            [attr.maxlength]="maxlength"
+            [attr.minlength]="minlength"
+            (input)="handleChange($event)"
+            (focus)="handleFocus()"
+            (blur)="handleBlur()"
+            #inputText
+        >
+        </textarea>
+    </ng-container>
+    <ng-container label><ng-content select="[label]"></ng-content></ng-container>
+    <ng-container icon><ng-content select="[icon]"></ng-content></ng-container>
+    <ng-container errors><ng-content select="[errors]"></ng-content></ng-container>
+</bh-input-wrap>

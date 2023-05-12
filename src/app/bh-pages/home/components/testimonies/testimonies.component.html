@@ -1,3 +1,8 @@
 <div class="bh-testimonies">
-    <bh-carousel></bh-carousel>
+    <div class="bh-testimonies-container" >
+        <h1>{{'customers.title' | bhTranslate}}</h1>
+        <bh-carousel [items]="customers"></bh-carousel>
+    </div>
+    <img class="bh-testimonies-line" [src]="'./assets/images/Linea_Seccion_04_Home.png'" />
+
 </div>

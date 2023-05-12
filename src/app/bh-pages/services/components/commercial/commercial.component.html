@@ -1,0 +1,23 @@
+<div class="bh-service-commercial">
+    <div class="bh-service-commercial-container">
+        <h2 class="bh-service-commercial-title">
+            {{service.title | bhTranslate}}
+        </h2>
+
+        <div class="bh-service-commercial-content">
+            <div class="bh-service-commercial-content__side">
+                <img class="bh-service-commercial-vector" src="./assets/images/services/Vector_02.png"/>
+            </div>
+            <div class="bh-service-commercial-content__main">
+                <ul>
+                    <li class="bh-service-commercial-item" *ngFor="let item of child; index as i">
+                        <span>{{getService(i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>   
+        <img class="bh-service-commercial-square-one" src="./assets/images/Square.png"/>
+
+    </div>
+</div>

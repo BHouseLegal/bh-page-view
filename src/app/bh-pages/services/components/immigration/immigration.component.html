@@ -1,0 +1,22 @@
+<div class="bh-service-immigration">
+    <div class="bh-service-immigration-container">
+        <h2 class="bh-service-immigration-title">
+            {{service.title | bhTranslate}}
+        </h2>
+
+        <div class="bh-service-immigration-content">
+            <div class="bh-service-immigration-content__main">
+                <ul>
+                    <li class="bh-service-immigration-item" *ngFor="let item of child; index as i">
+                        <span>{{getService(i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bh-service-immigration-content__side">
+                <img class="bh-service-immigration-vector" src="./assets/images/services/Vector_05.png"/>
+            </div>
+        </div>
+        <img class="bh-service-immigration-square-one" src="./assets/images/Square.png"/>
+        
+    </div>
+</div>

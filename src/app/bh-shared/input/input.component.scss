@@ -1,0 +1,19 @@
+input {
+    padding: 1.5rem 0.5rem 0.2rem 0.7rem;
+    width: -webkit-fill-available;
+    border: none;
+    background-color: var(--color-primary-dark);
+    border-radius: 0.5rem;
+    color: var(--color-borders);
+
+    &:focus {
+        outline: none;
+        background-color: var(--color-primary);
+        color: var(--color-text-light);        
+    }
+
+    &.invalid {
+        background-color: var(--error-main);
+        color: var(--color-borders);
+    }
+}

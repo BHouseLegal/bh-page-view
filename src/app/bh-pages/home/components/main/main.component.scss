@@ -1,82 +1,130 @@
 .bh-home-main {
-    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-tertiary-glass-light);   
     
-    background: url('../../../../../assets/images/main.jpg') no-repeat;
-    background-size: cover;
+    background: url('../../../../../assets/images/Fondo_Seccion_01.png') no-repeat;
+    background-size: 100vw 100vh;
+    background-position: left;
+
+    &-logo {
+        position: fixed;
+        z-index: 0;
+        width: 25vw;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        transition: all ease-in-out 0.5s;
+
+        @media (max-width: 750px) {
+            width: 70vw;
+        }
+
+    }
 
     &-container {
         position: relative;
     }
 
+    &-decorator {
+        position: absolute;
+        z-index: 3;
+        top: 55.8vh;
+        width: 16.98vw;
+        height: 16.98vw;
+
+        @media (max-width: 750px) {
+            display: none;
+        }
+
+    }
+
+    &-line {
+        width: 100vw;
+        position: absolute;
+        z-index: 1;
+        height: 100vh;
+
+        @media (max-width: 750px) {
+            display: none;
+        }
+    }
+
+    &-gradient {
+        height: 23.15vh;
+        width: 100%;
+        transform: matrix(-1, 0, 0, -1, 0, 0);
+        background: transparent linear-gradient(180deg, #7E234A 0%, #57575B00 100%) 0% 0% no-repeat padding-box;
+        position: absolute;
+        z-index: 2;
+        bottom: -2px;
+
+        &::after {
+            content: '';
+        }
+
+
+    }
+
     &-text {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-shadow: 0 1px 4px var(--color-text-dark);
+        top: 25%;
+        transform: translateY(-50%);
         z-index: 2;
+        color: var(--color-white);
+        text-shadow: var(--text-shadow);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all ease-in-out 0.5s;
+        width: 100vw;
 
-        &--bigger {
-            font-size: 5rem;
-            span {
-                color: var(--color-primary);
-            }
+        & h1 {
+            font: normal normal normal 4.95vw var(--font-family-primary);
+            letter-spacing: 0px;
+            margin: 0;
+            line-height: 1;
         }
 
-        &--small {
-            font-size: 1.3rem;
-            letter-spacing: 0.3rem;
-            position: absolute;
-            top: 5.5rem;
-            left: 6rem;
-            color: var(--color-secondary);
-            text-transform: uppercase;
+        & div {
+            font: normal normal normal 1.83vw var(--font-family-secondary);
+            letter-spacing: 0px;
         }
 
-        &__first-letter {
-            letter-spacing: -2.5rem;
-            font-size: 12rem;
-        }
 
-        @media (max-width: 600px) {
+        @media (max-width: 750px) {
+            top: 50%;
 
-            &__first-letter {
-                letter-spacing: -20px;
-                font-size: 7rem;
+            & h1 {
+                font: normal normal normal 12vw var(--font-family-primary);
+                letter-spacing: 0px;
+                margin: 0;
+                line-height: 1;
             }
-
-            &--bigger {
-                font-size: 2rem;
-                display: flex;
-                align-items: baseline;
-            }
-
-            &--small {
-                font-size: 0.7rem;
-                top: 3rem;
-                left: 3rem;
+    
+            & div {
+                font: normal normal normal 6vw var(--font-family-secondary);
+                letter-spacing: 0px;
             }
         }
 
         @media (min-width: 601px) and (max-width: 1024px) {
             &--bigger {
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             &--small {
-                top: 5rem;
-                left: 5.5rem;
-            
+                top: 9rem;
+                font-size: 0.7rem;
             }
         }   
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 750px) {
+        background-size: cover;
         background-position: center;
     }
 }

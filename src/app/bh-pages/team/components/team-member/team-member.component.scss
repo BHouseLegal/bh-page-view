@@ -1,0 +1,88 @@
+.bh-member {
+    padding: 10px 50px 10px 20px;
+    min-height: 350px;
+    display: grid;
+    gap: 50px;
+    text-align: justify;
+
+    &.odd {
+        background-color: var(--color-tertiary-glass-dark);
+        color: var(--color-text-light);
+        grid-template-columns: auto 3fr;
+
+        img {
+            width: 350px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%) rotate(10deg);
+            box-shadow: var(--elevation-z8);
+            border-radius: 5px;
+            order: 2;
+        }
+    }
+
+    &.even {
+        background-color: var(--color-secondary-glass-dark);
+        color: var(--color-primary-dark);
+        grid-template-columns: 3fr auto;
+
+        img {
+            width: 350px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%) rotate(-10deg);
+            box-shadow: var(--elevation-z8);
+            border-radius: 5px;
+        }
+    }
+
+    @media (max-width: 750px) {
+        &.odd {
+            grid-template-columns: auto;
+    
+            img {
+                order: initial;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+        }
+    
+        &.even {
+            grid-template-columns: auto;
+            
+            img {
+                order: initial;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        &.odd {
+            grid-template-columns: auto;
+    
+            img {
+                order: initial;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+        }
+    
+        &.even {
+            grid-template-columns: auto;
+
+            img {
+                order: initial;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+        }
+    }
+
+    
+}

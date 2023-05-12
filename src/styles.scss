@@ -10,6 +10,10 @@
     --color-text-dark: #6D6E71;
     --color-text-light: #F2F2F0;
 
+    // main colors
+    --color-white: #FFF;
+    --color-black: #000;
+
     // Primary colors variations
     --color-primary-light: #de91b8;
     --color-primary-dark: #521936;
@@ -25,6 +29,9 @@
     --color-primary-glass-dark: rgba(117,35,76,0.75);
     --color-secondary-glass-dark: rgba(217,170,82,0.75);
     --color-tertiary-glass-dark: rgba(88,89,91,0.75);
+
+    // Text shadow
+    --text-shadow: 0px 3px 6px #00000057;
 
 
     // Elevations
@@ -52,12 +59,58 @@
     // Transition
     --transition-bezier: all 0.15s cubic-bezier(0.17, 0.67, 0.8, 0.62);
 
+    --font-family-primary: 'Roboto Slab';
+    --font-family-secondary: 'Mulish';
+
+    --color-twitter: rgb(29, 155, 240);
+    
+    --error: #de91b8;
+    --error-main: rgba(117,35,76,0.25);
+    --error-contrast: rgba(117,35,76,0.75);
+
+    --color-borders: #ad7e26;
+    --color-base: #669999;
+
 }
 
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('assets/fonts/Slab/RobotoSlab-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('assets/fonts/Mulish/Mulish-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish-ExtraLight';
+    src: url('assets/fonts/Mulish/Mulish-ExtraLight.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto Slab';
+    margin: 0;
+    line-height: 1;
+}
+
+div, span, p {
+    font-family: 'Mulish';
+}
+
+html, 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Mulish';
     overflow-x: hidden;
+    overflow-y: auto;
 }	

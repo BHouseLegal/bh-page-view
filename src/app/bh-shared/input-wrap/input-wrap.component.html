@@ -1,0 +1,12 @@
+<div class="wrap-input" [class.wrap-input--invalid]="isInvalid" [class.wrap-input--focus]="isFocus">
+    <ng-content select="[field]"></ng-content>
+    <div class="wrap-input__label">
+        <ng-content select="[label]"></ng-content>
+    </div>
+    <div class="wrap-input__icon">
+        <ng-content select="[icon]"></ng-content>
+    </div>
+    <div class="wrap-input__error">
+        <ng-content select="[errors]"></ng-content>
+    </div>
+</div>

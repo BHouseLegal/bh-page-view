@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Languages } from '../bh-enums/languages';
 import { esCo } from '../bh-translations/es-co.json';
+import { enUs } from '../bh-translations/es-us.json';
 
 const languages: {[key:string]: any} = {
   "es-Co": esCo,
+  "en-Us": enUs
 }
 
 @Injectable({
@@ -24,5 +26,9 @@ export class TranslationService {
 
   setCurrentLanguage(language: string): void {
     this.currentLanguage = language;
+  }
+
+  getCurrentLanguage(): string {
+    return this.currentLanguage;
   }
 }

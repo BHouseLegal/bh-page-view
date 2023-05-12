@@ -8,6 +8,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ValueItemComponent } from './value-item/value-item.component';
+import { TwitterComponent } from './twitter/twitter.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ValueItemComponent } from './value-item/value-item.component';
     SidePanelComponent,
     FooterComponent,
     CarouselComponent,
-    ValueItemComponent
+    ValueItemComponent,
+    TwitterComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { ValueItemComponent } from './value-item/value-item.component';
     SidePanelComponent,
     FooterComponent,
     CarouselComponent,
-    ValueItemComponent
+    ValueItemComponent,
+    TwitterComponent
   ]
 })
 export class BhComponentsModule { }

@@ -1,0 +1,41 @@
+<div class="bh-service">
+    <div class="bh-service-labor">
+       
+
+        <div class="bh-service-labor-content">
+            <div class="bh-service-labor-content__main">
+                <h2 class="bh-service-labor-title">
+                    {{services[0].title | bhTranslate}}
+                </h2>
+                <ul>
+                    <li class="bh-service-labor-item" *ngFor="let item of getChild(services[0]); index as i">
+                        <span>{{getService(services[0],i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bh-service-labor-content__side">
+                <img class="bh-service-labor-vector" src="./assets/images/services/Vector_03.png"/>
+            </div>
+        </div>       
+    </div>
+    <div class="bh-service-intelectual">
+        
+
+        <div class="bh-service-intelectual-content">
+            <div class="bh-service-intelectual-content__side">
+                <img class="bh-service-intelectual-vector" src="./assets/images/services/Vector_04.png"/>
+            </div>
+            <div class="bh-service-intelectual-content__main">
+                <h2 class="bh-service-intelectual-title">
+                    {{services[1].title | bhTranslate}}
+                </h2>
+                <ul>
+                    <li class="bh-service-intelectual-item" *ngFor="let item of getChild(services[1]); index as i">
+                        <span>{{getService(services[1],i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>        
+    </div>
+</div>

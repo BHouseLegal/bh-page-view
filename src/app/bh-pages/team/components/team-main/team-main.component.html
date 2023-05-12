@@ -1,0 +1,17 @@
+<div class="bh-team-main-container">
+    <div class="bh-team-main-text">
+        <div class="bh-team-main-text--small">
+            {{getMainText('team.phrase' | bhTranslate)[1]}}
+        </div>
+        <div class="bh-team-main-text--bigger">
+            <span class="bh-team-main-text__first-letter">
+                {{getMainText('team.phrase' | bhTranslate)[0].charAt(0)}}
+            </span>
+            <span >
+                {{getMainText('team.phrase' | bhTranslate)[0].slice(1)}}
+            </span>
+        </div>
+    </div>
+    <div class="bh-team-main">
+    </div>
+</div>

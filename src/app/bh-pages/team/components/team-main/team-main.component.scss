@@ -1,0 +1,82 @@
+.bh-team-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-tertiary-glass-light);   
+    
+    background: url('../../../../../assets/images/team2.jpg') no-repeat;
+    background-size: cover;
+
+    &-container {
+        position: relative;
+    }
+
+    &-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 25%);
+        text-shadow: 0 1px 4px var(--color-text-dark);
+        z-index: 2;
+        font-family: var(--font-family-primary);
+
+        &--bigger {
+            font-size: 4rem;
+            span {
+                color: var(--color-secondary);
+            }
+        }
+
+        &--small {
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            position: absolute;
+            top: 7rem;
+            left: 9.3rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+        }
+
+        &__first-letter {
+            letter-spacing: -2rem;
+            font-size: 12rem;
+        }
+
+        @media (max-width: 750px) {
+
+            &__first-letter {
+                letter-spacing: 0px;
+                font-size: 7rem;
+            }
+
+            &--bigger {
+                font-size: 2rem;
+                display: flex;
+                align-items: baseline;
+            }
+
+            &--small {
+                font-size: 0.3rem;
+                top: 5.5rem;
+                left: 5.7rem;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            &--bigger {
+                font-size: 3rem;
+            }
+
+            &--small {
+                top: 9rem;
+                font-size: 0.7rem;
+            }
+        }   
+    }
+
+    @media (max-width: 750px) {
+        background-position: center;
+    }
+}

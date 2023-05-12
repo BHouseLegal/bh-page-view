@@ -1,3 +1,52 @@
-<div class="bh-footer">
-
+<div class="bh-footer" [ngStyle]="{'opacity': showFooter ? 1 : 0}">
+    <div class="bh-footer-container">
+        <div class="bh-footer__contact">
+            <div class="bh-footer__contact-phone">
+                <div class="bh-footer__contact--icon">
+                    <i class="fa-solid fa-phone"></i>
+                    {{'contact.phone1' | bhTranslate}}
+                </div>
+                <div class="bh-footer__contact--icon">
+                    <i class="fa-solid fa-phone"></i>
+                    {{'contact.phone2' | bhTranslate}}
+                </div>
+                <div class="bh-footer__contact--icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    {{'contact.email' | bhTranslate}}
+                </div>
+            </div>
+            <div class="bh-footer__contact-address">
+                <div class="bh-footer__contact--icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {{'contact.address1' | bhTranslate}}
+                </div>
+                <div class="bh-footer__contact--icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {{'contact.address2' | bhTranslate}}
+                </div>
+            </div>
+        </div>
+        
+        <div class="bh-footer__network">
+            <div class="bh-footer__network--icon">
+                <a href="https://twitter.com/businesshousels" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+            <div class="bh-footer__network--icon">
+                <a href="https://facebook.com/businesshouselegal" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+            <div class="bh-footer__network--icon">
+                <a href="https://instagram.com/businesshouselegal" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="bh-footer__network--icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+   
 </div>

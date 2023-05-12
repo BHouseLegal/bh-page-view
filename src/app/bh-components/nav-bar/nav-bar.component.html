@@ -1,20 +1,30 @@
-<div class="bh-nav-bar-container">
-    <img class="bh-nav-bar-logo" src="./assets/images/logoDesktopH.png" width="150px">
+<div class="bh-nav-bar" [ngStyle]="{'opacity': showNavBarScroll ? 1: 0}">
+    <div class="bh-nav-bar-container">
+        <a href="home">
+            <img class="bh-nav-bar-logo" src="./assets/images/Logo_Blanco_Sombra.png" width="100px">
+        </a>
 
-    <div class="bh-nav-bar-icon" (click)="toggleShowBar()">
-        <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0H24.75V2.01562H0V0ZM0 6.98438V5.01562H24.75V6.98438H0ZM0 12V9.98438H24.75V12H0Z" fill="#D9AA52"/>
-        </svg>
-    </div>
-    <div></div>
-    <div class="bh-nav-bar-items" [class.hide]="!showNavbar">
-        <div 
-            class="bh-nav-bar-item" 
-            [class.bh-nav-bar-item--active]="item.id === activeItem" 
-            *ngFor="let item of items" (click)="handleItemSelected(item)"
-        >
-            {{item.label | bhTranslate }}
+        <!-- <div class="bh-nav-bar-icon" (click)="toggleShowBar()">
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H24.75V2.01562H0V0ZM0 6.98438V5.01562H24.75V6.98438H0ZM0 12V9.98438H24.75V12H0Z" fill="#D9AA52"/>
+            </svg>
+        </div>
+        <div></div> -->
+        <div class="bh-nav-bar-items" [class.hide]="!showNavbar">
+            <div 
+                class="bh-nav-bar-item" 
+                [class.bh-nav-bar-item--active]="item.id === activeItem" 
+                *ngFor="let item of items" (click)="handleItemSelected(item)"
+            >
+                {{item.label | bhTranslate }}
+            </div>
+            <div 
+                class="bh-nav-bar-item" 
+            >
+                <img [class.bh-nav-bar-item-lang--active]="currentLanguage === 'en-Us'" src="./assets/images/USA.png" (click)="setLanguage('en-Us')" /><div class="divider"></div><img [class.bh-nav-bar-item-lang--active]="currentLanguage === 'es-Co'" src="./assets/images/COL.png" (click)="setLanguage('es-Co')" />
+            </div>
         </div>
     </div>
+    
     
 </div>

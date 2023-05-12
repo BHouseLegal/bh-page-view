@@ -1,0 +1,6 @@
+<div class="bh-team">
+    <bh-team-main></bh-team-main>
+    <div class="bh-team-members">
+        <bh-team-member *ngFor="let member of teamMembers;even as isEven; odd as isOdd"[isEven]="isEven" [isOdd]="isOdd" [member]="member"></bh-team-member>
+    </div>
+</div>

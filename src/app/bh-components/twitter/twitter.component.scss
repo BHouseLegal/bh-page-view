@@ -1,0 +1,43 @@
+.bh-twitter {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+
+    &-button {
+        background-color: var(--color-twitter);
+        color: var(--color-text-light);
+        text-align: center;
+        font-size: var(--font-size-bigger);
+        border-radius: 12px 12px 0 0;
+        width: fit-content;
+        padding: 5px 12px;
+        position: relative;
+        transition: 0.5s all ease-out;
+        transform: rotate(-90deg);
+        right: -30px;
+
+        &:hover {
+            cursor: pointer;
+            padding: 15px;
+        }
+
+    }
+
+    &-post {
+        
+        transition: 1s all ease-out;
+        width: 0;
+
+        &.show {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+

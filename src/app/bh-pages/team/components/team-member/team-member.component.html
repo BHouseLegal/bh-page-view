@@ -1,0 +1,10 @@
+<div class="bh-member" [class.odd]="isOdd" [class.even]="isEven">
+    <img [src]="'./assets/images/member-' + member.id + '.jpg'" width="250px">
+    <div>
+        <h1>{{member.name | bhTranslate | titlecase }}</h1>
+        <p>
+            {{member.description | bhTranslate}}
+        </p>
+    </div>
+    
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Customers } from 'src/app/bh-core/bh-constants/customers.const';
 
 @Component({
   selector: 'bh-testimonies',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonies.component.scss']
 })
 export class TestimoniesComponent implements OnInit {
+  public customers: typeof Customers = Customers;
 
   constructor() { }
 

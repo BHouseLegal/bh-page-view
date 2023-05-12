@@ -1,0 +1,41 @@
+.bh-contact-form {
+    padding: 10px 20px;
+
+    .form-row {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    h1 {
+        color: var(--color-primary);
+    }
+
+    &-button {
+        height: 2.5rem;
+        border-radius: 25px;
+        border: 1px solid transparent;
+        padding: 5px 12px;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+
+        
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button:not(.disabled):hover {
+                cursor: pointer;
+                background-color: var(--color-primary);
+                color: var(--color-text-light);
+            }
+
+            button.disabled {
+                opacity: 0.5;
+            }
+    
+        }
+    }
+}

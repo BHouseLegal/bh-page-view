@@ -1,0 +1,42 @@
+<div class="bh-service">
+    <div class="bh-service-consumption">
+
+        
+        <div class="bh-service-consumption-content">
+            <div class="bh-service-consumption-content__side">
+                <img class="bh-service-consumption-vector" src="./assets/images/services/Vector_07.png"/>
+            </div>
+            <div class="bh-service-consumption-content__main">
+                <h2 class="bh-service-consumption-title">
+                    {{services[1].title | bhTranslate}}
+                </h2>
+                <ul>
+                    <li class="bh-service-consumption-item" *ngFor="let item of getChild(services[1]); index as i">
+                        <span>{{getService(services[1],i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bh-service-defense">
+        
+
+        <div class="bh-service-defense-content">
+            <div class="bh-service-defense-content__main">
+                <h2 class="bh-service-defense-title">
+                    {{services[0].title | bhTranslate}}
+                </h2>
+                <ul>
+                    <li class="bh-service-defense-item" *ngFor="let item of getChild(services[0]); index as i">
+                        <span>{{getService(services[0],i) | bhTranslate}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bh-service-defense-content__side">
+                <img class="bh-service-defense-vector" src="./assets/images/services/Vector_06.png"/>
+            </div>
+        </div> 
+        
+    </div>
+</div>
